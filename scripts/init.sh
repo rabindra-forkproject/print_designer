@@ -11,6 +11,7 @@ fi
 rm -rf /workspaces/frappe_codespace/.git
 
 source /home/frappe/.nvm/nvm.sh
+nvm install v20.9.0
 nvm alias default v20.9.0
 nvm use v20.9.0
 
