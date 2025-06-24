@@ -37,11 +37,12 @@ sed -i '/redis/d' ./Procfile
 
 
 bench new-site dev.localhost \
- --mariadb-root-username=root
---mariadb-root-password=123 \
---admin-password admin 
-# \
-# --mariadb-user-host-login-scope='%'
+  --mariadb-root-username root \
+  --mariadb-root-password 123 \
+  --admin-password admin \
+  --mariadb-user-host-login-scope='%' \
+  --force
+
 
 bench --site dev.localhost set-config developer_mode 1
 bench --site dev.localhost clear-cache
