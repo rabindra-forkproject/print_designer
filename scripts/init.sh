@@ -44,7 +44,7 @@ bench new-site app.localhost \
   --force
 
 
-bench --site app set-config developer_mode 1
+bench --site app.localhost set-config developer_mode 1
 bench --site app.localhost clear-cache
 bench use app.localhost
 bench get-app print_designer
