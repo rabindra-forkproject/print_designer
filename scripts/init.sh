@@ -36,7 +36,7 @@ bench set-redis-socketio-host redis://redis-socketio:6379
 sed -i '/redis/d' ./Procfile
 
 
-bench new-site dev.localhost \
+bench new-site app.localhost \
   --mariadb-root-username root \
   --mariadb-root-password 123 \
   --admin-password admin \
@@ -44,8 +44,8 @@ bench new-site dev.localhost \
   --force
 
 
-bench --site dev.localhost set-config developer_mode 1
-bench --site dev.localhost clear-cache
-bench use dev.localhost
+bench --site app set-config developer_mode 1
+bench --site app.localhost clear-cache
+bench use app.localhost
 bench get-app print_designer
-bench --site dev.localhost install-app print_designer
+bench --site app.localhost install-app print_designer
