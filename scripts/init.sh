@@ -14,7 +14,8 @@ source /home/frappe/.nvm/nvm.sh
 nvm install v20.9.0
 nvm alias default v20.9.0
 nvm use v20.9.0
-
+# Install Yarn globally using npm
+npm install -g yarn
 echo "nvm use v20.9.0" >> ~/.bashrc
 cd /workspace
 
